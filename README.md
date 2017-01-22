@@ -10,6 +10,7 @@ and references for easy download.
 * [Capstone Course Page on Coursera](https://www.coursera.org/learn/photo-tourist-web-app-capstone)
 * [Capstone Lecture Commit Repository](https://github.com/jhu-ep-coursera/capstone_demoapp)
     * [Key Repository Tags and Branches](repository_tags.md)
+* [Discussion Board FAQ](https://github.com/jhu-ep-coursera/fullstack-capstone-course/wiki)
 
 ## Optional Resources
 * [Capstone Docker Source](https://github.com/jhu-ep-coursera/capstone_docker)
