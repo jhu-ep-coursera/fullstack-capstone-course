@@ -62,6 +62,13 @@ Switched to a new branch 'spa-app'
 
 ## Module 4
 
+* **module4.start**
+* **ptourist-model.start** - begin photo tourist domain model with authn policy
+* **authn-ui.start** - begin implementing authentication in UI
+* **ptourist-ui-authn.start** - begin implementing thing/image pages with authn roles
+* **ptourist-api-authz.start** - begin implementing authz-based API access
+* **ptourist-ui-authz.start** - begin implementing authz-based UI access
+
 ## Module 5
 
 ## Module 6
