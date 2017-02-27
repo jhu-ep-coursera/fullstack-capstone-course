@@ -68,8 +68,15 @@ Switched to a new branch 'spa-app'
 * **ptourist-ui-authn.start** - begin implementing thing/image pages with authn roles
 * **ptourist-api-authz.start** - begin implementing authz-based API access
 * **ptourist-ui-authz.start** - begin implementing authz-based UI access
+* **security-assignment** - commit to use for security assignment
 
 ## Module 5
+
+* **module5.start**
+* **content-api.start** - begin implementing image content API
+* **content-ui.start** - begin implementing image content display and uploading
+* **image-viewer.start** - begin implementing image viewer
+* **images-assignment** - commit to use for images assignment (to be published Mon27 evening EST)
 
 ## Module 6
 
