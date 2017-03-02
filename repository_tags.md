@@ -76,7 +76,7 @@ Switched to a new branch 'spa-app'
 * **content-api.start** - begin implementing image content API
 * **content-ui.start** - begin implementing image content display and uploading
 * **image-viewer.start** - begin implementing image viewer
-* **images-assignment** - commit to use for images assignment (to be published Mon27 evening EST)
+* **images-assignment** - commit to use for images assignment
 
 ## Module 6
 
