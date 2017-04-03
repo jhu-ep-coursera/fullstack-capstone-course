@@ -80,11 +80,15 @@ Switched to a new branch 'spa-app'
 
 ## Module 6
 
-* **moduler6.start**
+* **module6.start**
 * **geo-api.start** - begin implementing geolocation API
 * **geo-ui.start** - begin implementing geolocation UI
 * **geo-assignment** - commit to use for geolocation assignment
 
 ## Module 7
+
+* **module7.start**
+* **subjects-components.start** - begin implementing components for subjects page
+* **uilayout-assignment** - commit to use for UI Layout assignment (TO BE SUPPLIED)
 
 ## Module 8
