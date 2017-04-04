@@ -89,6 +89,6 @@ Switched to a new branch 'spa-app'
 
 * **module7.start**
 * **subjects-components.start** - begin implementing components for subjects page
-* **uilayout-assignment** - commit to use for UI Layout assignment (TO BE SUPPLIED)
+* **uilayout-assignment** - commit to use for UI Layout assignment
 
 ## Module 8
