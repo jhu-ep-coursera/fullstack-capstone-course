@@ -92,3 +92,6 @@ Switched to a new branch 'spa-app'
 * **uilayout-assignment** - commit to use for UI Layout assignment
 
 ## Module 8
+
+* **module8.start**
+* **map-assignment** - commit to use for Images and Mapping assignment
