@@ -11,6 +11,8 @@ and references for easy download.
 * [Capstone Lecture Commit Repository](https://github.com/jhu-ep-coursera/capstone_demoapp)
     * [Key Repository Tags and Branches](repository_tags.md)
 * [Discussion Board FAQ](https://github.com/jhu-ep-coursera/fullstack-capstone-course/wiki)
+* Course Notes
+    * [Development Environment Setup](./course-notes/dev_env/dev_env.md)
 
 ## Optional Resources
 * [Capstone Docker Source](https://github.com/jhu-ep-coursera/capstone_docker)
