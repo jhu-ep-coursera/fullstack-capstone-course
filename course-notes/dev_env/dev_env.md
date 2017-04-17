@@ -1,5 +1,8 @@
 # Development Environment
 
+These notes correspond to the installation lectures on the course web site and 
+have been annotated to reflect changes as of **2017-04-16** to those videos.
+
 ## Basic Requirements
 
 * Chrome Browser
