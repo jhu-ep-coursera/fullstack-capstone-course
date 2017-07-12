@@ -118,11 +118,26 @@ what we need from what it disables by default.
 1. Install the `rails-api` gem using the Ruby gem installer.
 
     ```shell
-    $ gem install rails-api
+    $ gem install rails-api -v 0.4.0 --no-ri --no-doc
+    Fetching: railties-5.0.1.gem (100%)
+    Successfully installed railties-5.0.1
+    Fetching: rails-api-0.4.0.gem (100%)
     Successfully installed rails-api-0.4.0
-    Parsing documentation for rails-api-0.4.0
-    Done installing documentation for rails-api after 0 seconds
-    1 gem installed
+    2 gems installed
+    ```
+
+    **2017-07-11**: Unfortunately railties 5.0.x will get installed with it.
+
+    ```shell
+    $ rails-api -v
+    Rails 5.0.1
+    ```
+
+    **2017-07-11**: Uninstall railties 5.0.x
+
+    ```shell
+    $ gem uninstall railties -v 5.0.1
+    Successfully uninstalled railties-5.0.1
     ```
 
 2. If you are using `rbenv`, add `rails-api` commands to the shell
@@ -132,7 +147,7 @@ using `rbenv rehash`
     $ rbenv rehash
     ```
 
-3. Verify the `rails-api` command is accessible
+3. Verify the `rails-api` command is accessible and reports version `4.2.6`.
 
     ```shell
     $ rails-api -v
@@ -185,7 +200,7 @@ following the following build steps.
 4. Create the database for both the development and test profiles.
 
     ```shell
-    $ rake db:create
+    $ bundle exec rake db:create
     ```
 
     * **Note**: If you get a permission error with the username set to nil, assign
@@ -194,14 +209,14 @@ following the following build steps.
 5. Migrate the database schema for the development and test profiles.
 
     ```shell
-    $ rake db:migrate
-    $ rake db:migrate RAILS_ENV=test
+    $ bundle exec rake db:migrate
+    $ bundle exec rake db:migrate RAILS_ENV=test
     ```
 
 6. Run the unit tests for the example application
 
     ```shell
-    $ rake 
+    $ bundle exec rake 
     ```
 
     You can optionally use later tags in the course, but with each 

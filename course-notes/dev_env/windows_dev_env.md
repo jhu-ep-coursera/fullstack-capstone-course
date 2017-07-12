@@ -42,6 +42,8 @@ receive an SSL error as shown below -- follow the corrective setup steps.
 
     **2017-04-16 Update**: The following is not an issue with the Ruby 2.3 
     installer. This was only true with the Ruby 2.2/Rails 2.4.6 installer.
+    Go ahead and run `gem update --system --no-ri --no-doc` without error
+    when using Ruby 2.3 installer. Skip to step 7 in this section after this.
 
     **Note**: Rails on Windows installs with SSL verification enabled
     to assure that only trusted sites are used for downloads. However,
@@ -156,19 +158,19 @@ railties 5 gems (and dependencies) to the installation. Remove these
 and we will install 4.2.6 later.
 
 
-    ```shell
-    gem uninstall rails
-    gem uninstall railties
-    ```
+```shell
+gem uninstall rails
+gem uninstall railties
+```
 
-    If you run into an error with `bcrypt` later, try the following
-    (https://github.com/codahale/bcrypt-ruby/issues/142)
+If you run into an error with `bcrypt` later, try the following
+(https://github.com/codahale/bcrypt-ruby/issues/142)
 
-    ```shell
-    $ gem uninstall bcrypt
-    $ gem uninstall bcrypt-ruby
-    $ gem install bcrypt --platform=ruby
-    ```
+```shell
+$ gem uninstall bcrypt
+$ gem uninstall bcrypt-ruby
+$ gem install bcrypt --platform=ruby
+```
 
 ## (Optional) Install PostgreSQL
 
@@ -293,6 +295,7 @@ Window:
     ```
 
     **2017-04-16 Note**: Version was `v6.10.2`
+    **2017-07-11 Note**: Version was `v6.11.1`
 
 ## Install ImageMagick
 
@@ -306,6 +309,7 @@ the MiniMagick Ruby gem and the native application.
 Download version 6.9.6, Q8, DLL 
 
     **2017-04-16 Note**: Version was `ImageMagick-6.9.8-3-Q8-x64-dll.exe`
+    **2017-07-11 Note**: Version was `ImageMagick-6.9.8-10-Q8-x64-dll.exe`
 
 2. Run the downloaded installer and answer the prompts with the default answers.
 
@@ -367,12 +371,13 @@ http://chromedriver.storage.googleapis.com/index.html and place it somewhere on 
 https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver.
 ```
 
-1. [Download](http://chromedriver.storage.googleapis.com/index.html)
+1. [Download](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 a recent version of ChromeDriver.
 
     **2017-04-16 Note**: Verson `2.29` supports browser versions v56-58. Make 
     sure to download version that is appropriate for your version of the 
-    Chrome browser.
+    Chrome browser. My version of Chrome states it is v54, so I downloaded
+    `2.26`.
 
 2. Extract the binary from the archive
 
