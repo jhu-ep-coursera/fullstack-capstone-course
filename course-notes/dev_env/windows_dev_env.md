@@ -41,7 +41,7 @@ development environment with Github.
 receive an SSL error as shown below -- follow the corrective setup steps.
 
     **2017-04-16 Update**: The following is not an issue with the Ruby 2.3 
-    installer. This was only true with the Ruby 2.2/Rails 2.4.6 installer.
+    installer. This was only true with the Ruby 2.2/Rails 4.2.6 installer.
     Go ahead and run `gem update --system --no-ri --no-doc` without error
     when using Ruby 2.3 installer. Skip to step 7 in this section after this.
 
