@@ -71,6 +71,12 @@ looking at the version and update channel under `Vital Stats`.
     the version must  be in the 45.x series. Feel free to skip this
     step if you do not plan to test with Firefox.  You can always
     decide later.
+    * **2017-07-17 Note:** I found easy access to older versions
+    at [https://ftp.mozilla.org/pub/firefox/releases/] and happen
+    to install `45.8.0esr`. I successfully tested with a later
+    course branch after setting `FIREFOX_BINARY_PATH` as will be
+    discussed in the testing module. Again -- treat this as an
+    alternate choice.  Chrome is good enough.
 
 
 ## Operating System Specific Instructions
