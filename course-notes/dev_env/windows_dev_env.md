@@ -187,8 +187,8 @@ gem 'bcrypt', '3.1.12'
 $ bundle install
 ```
 
-    **2018-07-15**: I ran into the above error when building the master branch.
-    Remember this solution when you get into the later modules.
+  **2018-07-15**: I ran into the above error when building the master branch.
+  Remember this solution when you get into the later modules.
 
 ## (Optional) Install PostgreSQL
 
