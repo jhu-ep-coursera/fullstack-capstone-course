@@ -77,6 +77,9 @@ looking at the version and update channel under `Vital Stats`.
     course branch after setting `FIREFOX_BINARY_PATH` as will be
     discussed in the testing module. Again -- treat this as an
     alternate choice.  Chrome is good enough.
+    * **2018-07-15 Note:** I again found easy access to older versions
+    at [https://ftp.mozilla.org/pub/firefox/releases/] and happen
+    to install `45.9.0esr`. 
 
 
 ## Operating System Specific Instructions
@@ -139,11 +142,20 @@ what we need from what it disables by default.
     Rails 5.0.1
     ```
 
-    **2017-07-11**: Uninstall railties 5.0.x
+
+    **2017-07-11**: Uninstall railties 5.x.x
 
     ```shell
     $ gem uninstall railties -v 5.0.1
     Successfully uninstalled railties-5.0.1
+    ```
+
+    **2018-07-15**: Check the first line of "Fetching: railties". On this
+    date the version was 5.1.3.
+
+    ```shell
+    $ gem uninstall railties -v 5.x.x
+    Successfully uninstalled railties-5.x.x
     ```
 
 2. If you are using `rbenv`, add `rails-api` commands to the shell

@@ -12,7 +12,7 @@ we will stick with that. The RailsInstaller tends to be slightly behind in its
 supported version of Ruby, but should not matter for this course. 
 
 **2017-04-16 Update**: The current installer is Ruby 2.3 (great!),
-but also includes Rails 5.0. The course example is using Rails 4.2.6
+but also includes Rails 5.x. The course example is using Rails 4.2.6
 to try to stay consistent with previous courses in the specialization.
 Please download and install using the RailsInstaller, but downgrade
 your version of Rails prior to completing.
@@ -113,8 +113,7 @@ receive an SSL error as shown below -- follow the corrective setup steps.
         ```
 
 7. Add a root trust store file for bundler and other libraries to use.
-One of those libraries is 
-This will be similar to what was done previously except that it does not 
+This will be similar to what was done in the previous step except that it does not 
 matter where we store it -- but we must reference it through an environment
 variable called `SSL_CERT_FILE`. We will be unable to demonstrate the 
 error caused by this missing step until later in the course, but it will
@@ -151,7 +150,13 @@ be good to get this out of the way at this time.
     * Revisit this section once more of Rails and dependencies are specified
     if we get additional SSL errors running the `bundle` command.
 
-8. Remove Rails 5
+8. **2018-07-15**: Unless I missed a path update somewhere, the version of git within
+the RailsInstaller is 1.9.x, which runs a version of SSL that is no longer accepted
+by github. Follow the [link to Git for Windows](https://git-scm.com/) from the 
+RailsInstaller site to locate a more recent version. I found 2.18.0 on this date
+and installed using all defaults.
+
+9. Remove Rails 5
 
 The RailsInstaller installation will automatically add the rails and 
 railties 5 gems (and dependencies) to the installation. Remove these
@@ -169,8 +174,21 @@ If you run into an error with `bcrypt` later, try the following
 ```shell
 $ gem uninstall bcrypt
 $ gem uninstall bcrypt-ruby
-$ gem install bcrypt --platform=ruby
+$ gem install bcrypt --platform=ruby -v 3.1.12
 ```
+
+Add the following to the Gemfile
+
+```
+gem 'bcrypt', '3.1.12'
+```
+
+```
+$ bundle install
+```
+
+    **2018-07-15**: I ran into the above error when building the master branch.
+    Remember this solution when you get into the later modules.
 
 ## (Optional) Install PostgreSQL
 
@@ -195,6 +213,8 @@ provides the Windows install executables from two sources: EnterpriseDB and BigS
 Either should work. I went with BigSQL since it mentioned the words "developer-friendly"
 and found that nothing needed to be done after the installer completed.
 
+    **2018-07-15 Note**: Postgres 10 was available. I went with 9.6.9.
+
 2. Navigate through the installer set-up screens by leaving the defaults
 
     **2017-04-16 Note**: You now must manually select the pgDevOps
@@ -215,6 +235,9 @@ makes the binaries available in the path. If you installed EnterpriseDB, then
 you must add `C:\Program Files\PostgreSQL\9.6\bin` you your ENV PATH before performing
 the following steps.
 
+    **2018-07-15**: I had to add the postgres\bin path to my PATH variable.
+    The installer did not automatically add this.
+
     ```shell
     $ psql --version
     psql (PostgreSQL) x.x.x
@@ -234,6 +257,10 @@ the following steps.
 
 1. Students can find manual installation steps for MongoDB using the 
 [Install MongoDB on Windows page](https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-windows/)
+
+    **2018-07-15**: I downloaded my version of the installer under the Community Server tab
+    and located a 3.x version of the server (consistent with the course videos) under 
+    "All Version Binaries".
 
 2. Navigate through the installer set-up screens by leaving the defaults
 
@@ -295,7 +322,11 @@ Window:
     ```
 
     **2017-04-16 Note**: Version was `v6.10.2`
+
     **2017-07-11 Note**: Version was `v6.11.1`
+
+    **2018-07-15 Note**: Version was `v8.11.3`. I found and installed
+    version [6.11.1 from here](https://nodejs.org/dist/v6.11.1/)
 
 ## Install ImageMagick
 
@@ -309,7 +340,10 @@ the MiniMagick Ruby gem and the native application.
 Download version 6.9.6, Q8, DLL 
 
     **2017-04-16 Note**: Version was `ImageMagick-6.9.8-3-Q8-x64-dll.exe`
+
     **2017-07-11 Note**: Version was `ImageMagick-6.9.8-10-Q8-x64-dll.exe`
+
+    **2017-07-11 Note**: Version was `ImageMagick-6.9.10-6-Q8-x64-dll.exe`
 
 2. Run the downloaded installer and answer the prompts with the default answers.
 
@@ -378,6 +412,8 @@ a recent version of ChromeDriver.
     sure to download version that is appropriate for your version of the 
     Chrome browser. My version of Chrome states it is v54, so I downloaded
     `2.26`.
+
+    **2018-07-15**: The [alternate versions are located here](https://chromedriver.storage.googleapis.com/index.html)
 
 2. Extract the binary from the archive
 
