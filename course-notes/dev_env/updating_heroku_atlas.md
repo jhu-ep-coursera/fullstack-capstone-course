@@ -40,10 +40,10 @@ from this point forward.
 Add the following new properties to turn off `database_cleaner` safety checks
 during the rake DB managemen scripts.
 
-    ```text
-    heroku config:set --remote heroku-16 export DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true
-    heroku config:set --remote heroku-16 DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true
-    ```
+  ```text
+  heroku config:set --remote heroku-16 export DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true
+  heroku config:set --remote heroku-16 DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true
+  ```
 
 ## Gemfile Updates
 
@@ -61,25 +61,25 @@ during the rake DB managemen scripts.
 
 4. update the Gemfile.lock
 
-    ```text
-    $ bundle update mongo
-    ```
+  ```text
+  $ bundle update mongo
+  ```
 
 5. Commit those changes to a branch (e.g., `ruby238`)
 
 
 ## Upload Application
 
-    ```text
-    $ git push heroku-16 ruby238:master
-    ```
+  ```text
+  $ git push heroku-16 ruby238:master
+  ```
 
 ## Initialize the Database
 
-    ```text
-    $ heroku heroku16 run rake db:migrate
-    $ heroku run bundle exec rake ptourist:reset_all --remote heroku-16
-    ```
+  ```text
+  $ heroku heroku16 run rake db:migrate
+  $ heroku run bundle exec rake ptourist:reset_all --remote heroku-16
+  ```
 
 ## Update an existing application
 
@@ -87,16 +87,16 @@ Once you have confidence in your new test environment, you can try updating exis
 environments. The following commands are being executed against a Heroku environment
 aliased as `dev` in git remotes.
 
-    ```text
-    $ heroku stack:set heroku-16 -a (app name)
-    $ heroku config:set --remote dev MLAB_URI='mongodb://.../dev...
-    $ git commit --allow-empty -m "Upgrading to heroku-16"
-    $ git push dev ruby238:master
-    $ 
-    $ heroku config:set --remote dev DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true
-    $ heroku config:set --remote dev DATABASE_CLEANER_ALLOW_PRODUCTION=true
-    $ heroku run bundle exec rake ptourist:reset_all --remote dev
-    ```
+  ```text
+  $ heroku stack:set heroku-16 -a (app name)
+  $ heroku config:set --remote dev MLAB_URI='mongodb://.../dev...
+  $ git commit --allow-empty -m "Upgrading to heroku-16"
+  $ git push dev ruby238:master
+  $ 
+  $ heroku config:set --remote dev DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true
+  $ heroku config:set --remote dev DATABASE_CLEANER_ALLOW_PRODUCTION=true
+  $ heroku run bundle exec rake ptourist:reset_all --remote dev
+  ```
 
-*NOTE*  I shared my free project/cluster between `heroku-16`, `dev`, and `staging` using a 
+*NOTE*:  I shared my free project/cluster between `heroku-16`, `dev`, and `staging` using a 
 different database name at the end of the URL
