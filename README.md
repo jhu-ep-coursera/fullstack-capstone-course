@@ -13,6 +13,7 @@ and references for easy download.
 * [Discussion Board FAQ](https://github.com/jhu-ep-coursera/fullstack-capstone-course/wiki)
 * Course Notes
     * [Development Environment Setup](./course-notes/dev_env/dev_env.md)
+    * [Heroku-16 and Mongo Atlas Upgrade](./course-notes/dev_env/updating_heroku_atlas.md)
 
 ## Optional Resources
 * [Capstone Docker Source](https://github.com/jhu-ep-coursera/capstone_docker)
